@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Rijndael">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/Rijndael.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

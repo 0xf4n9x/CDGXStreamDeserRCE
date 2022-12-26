@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="woodpecker-bcel-0.1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/woodpecker-bcel-0.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

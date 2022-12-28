@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.yso.payloads.util;
+package com.cdg.yso.payloads.util;
 
 
 import javassist.CannotCompileException;

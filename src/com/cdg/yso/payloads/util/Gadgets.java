@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.yso.payloads.util;
+package com.cdg.yso.payloads.util;
 
 
 import static com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.DESERIALIZE_TRANSLET;
@@ -11,9 +11,9 @@ import javassist.*;
 import com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet;
 import com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl;
 import com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl;
-import me.gv7.woodpecker.yso.GeneratePayload;
-import me.gv7.woodpecker.yso.payloads.custom.CustomCommand;
-import me.gv7.woodpecker.yso.payloads.custom.TemplatesImplUtil;
+import com.cdg.yso.GeneratePayload;
+import com.cdg.yso.payloads.custom.CustomCommand;
+import com.cdg.yso.payloads.custom.TemplatesImplUtil;
 
 
 /*

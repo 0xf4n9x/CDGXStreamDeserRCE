@@ -1,12 +1,12 @@
-package me.gv7.woodpecker.yso;
+package com.cdg.yso;
 
 import java.io.PrintStream;
 import java.util.*;
 
-import me.gv7.woodpecker.yso.payloads.ObjectPayload;
-import me.gv7.woodpecker.yso.payloads.annotation.Authors;
-import me.gv7.woodpecker.yso.payloads.annotation.Dependencies;
-import me.gv7.woodpecker.yso.payloads.util.DirtyDataWrapper;
+import com.cdg.yso.payloads.ObjectPayload;
+import com.cdg.yso.payloads.annotation.Authors;
+import com.cdg.yso.payloads.annotation.Dependencies;
+import com.cdg.yso.payloads.util.DirtyDataWrapper;
 import org.apache.commons.cli.*;
 
 @SuppressWarnings("rawtypes")

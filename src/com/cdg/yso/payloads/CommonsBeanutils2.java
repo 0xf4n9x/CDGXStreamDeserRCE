@@ -1,13 +1,13 @@
-package me.gv7.woodpecker.yso.payloads;
+package com.cdg.yso.payloads;
 
-import me.gv7.woodpecker.yso.payloads.annotation.Authors;
-import me.gv7.woodpecker.yso.payloads.annotation.Dependencies;
-import me.gv7.woodpecker.yso.payloads.util.Gadgets;
-import me.gv7.woodpecker.yso.payloads.util.PayloadRunner;
+import com.cdg.yso.payloads.annotation.Authors;
+import com.cdg.yso.payloads.annotation.Dependencies;
+import com.cdg.yso.payloads.util.Gadgets;
+import com.cdg.yso.payloads.util.PayloadRunner;
 import org.apache.commons.beanutils.BeanComparator;
 import java.util.PriorityQueue;
 
-import static me.gv7.woodpecker.yso.payloads.util.Reflections.setFieldValue;
+import static com.cdg.yso.payloads.util.Reflections.setFieldValue;
 
 @SuppressWarnings({ "rawtypes", "unchecked" })
 @Dependencies({"commons-beanutils:commons-beanutils:1.9.2","commons-logging:commons-logging:1.2"})

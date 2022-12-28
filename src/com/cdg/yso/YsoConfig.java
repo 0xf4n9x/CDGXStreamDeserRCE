@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.yso;
+package com.cdg.yso;
 
 public class YsoConfig {
     private boolean isCompress = false;

@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.yso.payloads.util;
+package com.cdg.yso.payloads.util;
 
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Constructor;

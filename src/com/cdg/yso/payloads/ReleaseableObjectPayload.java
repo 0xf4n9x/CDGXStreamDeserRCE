@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.yso.payloads;
+package com.cdg.yso.payloads;
 
 
 /**

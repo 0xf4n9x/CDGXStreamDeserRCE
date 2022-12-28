@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.yso.payloads;
+package com.cdg.yso.payloads;
 
 
 import java.lang.reflect.Modifier;
@@ -7,7 +7,7 @@ import java.util.Set;
 
 import org.reflections.Reflections;
 
-//import me.gv7.woodpecker.yso.GeneratePayload;
+//import com.cdg.yso.GeneratePayload;
 
 
 @SuppressWarnings ( "rawtypes" )

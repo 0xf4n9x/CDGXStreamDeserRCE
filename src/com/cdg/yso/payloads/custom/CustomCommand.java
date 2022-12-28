@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.yso.payloads.custom;
+package com.cdg.yso.payloads.custom;
 
 public class CustomCommand {
     public final static String COMMAND_SLEEP = "sleep:";

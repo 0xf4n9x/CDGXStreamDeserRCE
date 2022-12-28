@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.yso.payloads.annotation;
+package com.cdg.yso.payloads.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

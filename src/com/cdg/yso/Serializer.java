@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.yso;
+package com.cdg.yso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

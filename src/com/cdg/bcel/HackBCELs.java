@@ -1,4 +1,4 @@
-package me.gv7.woodpecker.bcel;
+package com.cdg.bcel;
 
 import me.gv7.woodpecker.bcel.classfile.Utility;
 

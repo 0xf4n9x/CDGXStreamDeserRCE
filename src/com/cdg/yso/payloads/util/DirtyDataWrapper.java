@@ -1,6 +1,6 @@
-package me.gv7.woodpecker.yso.payloads.util;
+package com.cdg.yso.payloads.util;
 
-//import me.gv7.woodpecker.yso.payloads.CommonsCollections6;
+//import com.cdg.yso.payloads.CommonsCollections6;
 
 //import java.io.FileOutputStream;
 //import java.io.ObjectOutputStream;

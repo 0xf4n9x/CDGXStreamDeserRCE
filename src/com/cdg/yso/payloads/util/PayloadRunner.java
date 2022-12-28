@@ -1,10 +1,10 @@
-package me.gv7.woodpecker.yso.payloads.util;
+package com.cdg.yso.payloads.util;
 
 import com.thoughtworks.xstream.XStream;
 
 import java.io.File;
 
-import me.gv7.woodpecker.yso.payloads.ObjectPayload;
+import com.cdg.yso.payloads.ObjectPayload;
 
 /*
  * utility class for running exploits locally from command line

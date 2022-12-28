@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="netty-codec-http-4.1.86.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/netty-codec-http-4.1.86.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -12,7 +12,9 @@ import java.net.InetSocketAddress;
 
 public class Http {
     public static Proxy getProxy(String proxyURL) throws MalformedURLException {
-//        Proxy proxy = null;
+        if (proxyURL == null) {
+            return null;
+        }
         URL url = new URL(proxyURL);
         if (proxyURL.contains("http")) {
             return new Proxy(Proxy.Type.HTTP, new InetSocketAddress(url.getHost(),

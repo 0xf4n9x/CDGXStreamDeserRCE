@@ -18,7 +18,7 @@ public class PayloadRunner {
 //			public byte[] call() throws Exception {
         final String command = args.length > 0 && args[0] != null ? args[0] : getDefaultTestCmd();
 
-        System.out.println("generating payload object(s) for command: '" + command + "'");
+//        System.out.println("generating payload object(s) for command: '" + command + "'");
 
         ObjectPayload<?> payload = clazz.newInstance();
         final Object objBefore = payload.getObject(command);

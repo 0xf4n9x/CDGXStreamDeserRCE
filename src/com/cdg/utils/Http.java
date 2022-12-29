@@ -12,16 +12,16 @@ import java.net.InetSocketAddress;
 
 public class Http {
     public static Proxy getProxy(String proxyURL) throws MalformedURLException {
-        if (proxyURL == null) {
-            return null;
-        }
-        URL url = new URL(proxyURL);
         if (proxyURL.contains("http")) {
+            URL url = new URL(proxyURL);
             return new Proxy(Proxy.Type.HTTP, new InetSocketAddress(url.getHost(),
-                    url.getDefaultPort()));
+                    url.getPort()));
         } else if (proxyURL.contains("socks")) {
-            return new Proxy(Proxy.Type.SOCKS, new InetSocketAddress(url.getHost(),
-                    url.getDefaultPort()));
+            String[] authority = proxyURL.replace("socks5://","").replace("socks4a://","").replace("socks4://","").replace("socks://","").split(":");;
+            String host = authority[0];
+            String port = authority[1];
+            return new Proxy(Proxy.Type.SOCKS, new InetSocketAddress(host,
+                    Integer.parseInt(port)));
         } else {
             return null;
         }
@@ -39,15 +39,15 @@ public class Http {
         return result;
     }
 
-//    public static HttpResponse get(String url, Map<String, String> headers, String proxyURL) throws MalformedURLException {
-//        HttpResponse result;
-//        result = HttpRequest.get(url)
-//                .headerMap(setHeaders(headers), true)
-//                .setProxy(getProxy(proxyURL))
-//                .timeout(20000)
-//                .execute();
-//        return result;
-//    }
+    public static HttpResponse get(String url, Map<String, String> headers, String proxyURL) throws MalformedURLException {
+        HttpResponse result;
+        result = HttpRequest.get(url)
+                .headerMap(setHeaders(headers), true)
+                .setProxy(getProxy(proxyURL))
+                .timeout(20000)
+                .execute();
+        return result;
+    }
 
     private static Map<String, String> setHeaders(Map<String, String> headers) {
         Map<String, String> baseHeader = new HashMap<>();

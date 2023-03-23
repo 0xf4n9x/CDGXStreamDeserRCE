@@ -10,3 +10,7 @@
 /out/
 
 .DS_Store
+
+CDGXStreamDeserRCE*.jar
+
+te*.jsp

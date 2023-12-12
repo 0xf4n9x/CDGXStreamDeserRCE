@@ -22,8 +22,8 @@ public class PayloadRunner {
 
         ObjectPayload<?> payload = clazz.newInstance();
         final Object objBefore = payload.getObject(command);
-        XStream xStream;
-        xStream = new XStream();
+//        XStream xStream;
+        XStream xStream = new XStream();
         String s1 = xStream.toXML(objBefore);
 //                System.out.println(s1);
 //                System.out.println(s1.getBytes());

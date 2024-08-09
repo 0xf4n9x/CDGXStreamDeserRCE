@@ -7,7 +7,6 @@ public class Decode {
 //        String var0 = "FEPCCCLCENHIPOAFPAPDDFCGEAPNMDBMOJPMJAKKNPHOKIKIDCBPHEGKLDGNHCBDEIMODEKMKPFBAIMMNLOJJKMIICLAPJAAFGNGAKFBMPKPJMOIKODEJJMHJCCHKBMFMMFDLOMDPABOJCEAPOFDCPMKGDHFNBBIMCIPAMMIIANFPAJHFAABLLLANNIDAGNKOHONJGFGBKHFDMCLJIMICBHBJEIAAIMACN";
         try {
             String result = ServiceUtil.decodeString(targetstr);
-            System.out.println("[+] Decode Successed:");
             System.out.println(result);
         } catch (Exception e) {
             e.printStackTrace();
